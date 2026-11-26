@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HearthLedger · Household Budget</title>
+<meta name="description" content="HearthLedger: one household's whole budget — the plan, the bills, the goals and the tools — in a single page that runs offline.">
+<link rel="stylesheet" href="style.css">
+<script type="module" src="main.js"></script>
+</head>
+<body>
+<header class="site-head">
+  <a class="brand" href="#/">🏡 HearthLedger</a>
+  <nav>
+    <a data-route="/" href="#/">Dashboard</a>
+    <a data-route="/budget" href="#/budget">Budget</a>
+    <a data-route="/transactions" href="#/transactions">Transactions</a>
+    <a data-route="/bills" href="#/bills">Bills</a>
+    <a data-route="/goals" href="#/goals">Goals</a>
+    <a data-route="/tools" href="#/tools">Tools</a>
+    <a data-route="/guide" href="#/guide">Guide</a>
+  </nav>
+</header>
+<main id="app"></main>
+<footer class="site-foot">
+  <p>HearthLedger — the Hartley household's budget, kept in the open. Every figure on this site is summed
+  from the same ledger, and the whole site runs offline from its own files.</p>
+  <p><button type="button" id="reset-demo">Reset my changes</button> — wipe anything you added or edited here and return to the printed November figures.</p>
+</footer>
+<script type="module">
+  import { resetAll } from './store.js';
+  document.getElementById('reset-demo').addEventListener('click', resetAll);
+</script>
+</body>
+</html>
